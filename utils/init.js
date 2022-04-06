@@ -7,8 +7,8 @@ module.exports = async () => {
 	unhandledError();
 	checkNode(`10`);
 	welcome({
-		title: `ramadan-cli`,
-		tagLine: `by Awais.dev\n${pkgJSON.description}`,
+		title: `roza node-cli`,
+		tagLine: `by Jahanzeb Jabbar \n${pkgJSON.description}`,
 		bgColor: `#81EF96`,
 		color: `#FFFFFF`,
 		bold: true,

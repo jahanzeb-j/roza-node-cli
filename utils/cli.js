@@ -8,7 +8,7 @@ const dim = chalk.dim;
 module.exports = meow(
 	`
 	Usage
-	  ${green(`ramadan-cli`)} ${cyan(`<command>`)} ${yellow(`[--option]`)}
+	  ${green(`roza`)} ${cyan(`<command>`)} ${yellow(`[--option]`)}
 
 	Commands
 	  ${cyan(`cityName`)}    Get data for a city
@@ -16,11 +16,13 @@ module.exports = meow(
 
 	Options
 	  ${yellow(`--all`)}, ${yellow(`-a`)}   Show all days
+	  ${yellow(`--next`)}, ${yellow(`-n`)}   Show next day
 
 	Examples
-	${green(`ramadan-cli`)} ${cyan(`lahore`)}
-	${green(`ramadan-cli`)} ${cyan(`karachi`)} ${yellow(`--all`)}
-	${green(`ramadan-cli`)} ${cyan(`help`)}
+	${green(`roza`)} ${cyan(`lahore`)}
+	${green(`roza`)} ${cyan(`karachi`)} ${yellow(`--all`)}
+	${green(`roza`)} ${cyan(`beijing`)} ${yellow(`-a`)}
+	${green(`roza`)} ${cyan(`help`)}
 `,
 	{
 		booleanDefault: undefined,
@@ -31,6 +33,11 @@ module.exports = meow(
 				type: 'boolean',
 				default: false,
 				alias: 'a'
+			},
+			next: {
+				type: 'boolean',
+				default: false,
+				alias: 'n'
 			}
 		}
 	}

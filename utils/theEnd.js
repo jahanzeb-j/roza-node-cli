@@ -8,14 +8,14 @@ module.exports = async ({city, noData}) => {
 	!noData &&
 		console.log(
 			dim(
-				`\n${sym.info} City: ${cityNiceName}. Times for Fiqh Hanafi\nFiqh Jafria: Sehar -10 mins | Iftar time +10 mins`
+				`\n${sym.info} City: ${cityNiceName}. Times for Fiqh Hanafi\nFiqh Jafria: Sehar -10 mins | Iftar time +10 mins\n`
 			)
 		);
-	console.log(
-		`\n${sym.success} ${dim(
-			`Star the repo for updates → https://git.io/ramadan-cli`
-		)}\n${sym.info} ${dim(
-			`Follow for more CLIs → https://twitter.com/MrAhmadAwais\n\n`
-		)}`
-	);
+	// console.log(
+	// 	`\n${sym.success} ${dim(
+	// 		`Star the repo for updates → https://git.io/ramadan-cli`
+	// 	)}\n${sym.info} ${dim(
+	// 		`Follow for more CLIs → https://twitter.com/MrAhmadAwais\n\n`
+	// 	)}`
+	// );
 };

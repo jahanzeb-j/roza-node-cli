@@ -1,14 +1,8 @@
 {
-	"name": "ramadan-cli",
-	"version": "4.0.2",
+	"name": "roza",
+	"version": "1.0.2",
 	"description": "Check Sehar and Iftar times in Ramadan within your terminal.",
 	"license": "MIT",
-	"repository": "ahmadawais/ramadan-cli",
-	"author": {
-		"name": "Ahmad Awais",
-		"email": "me@AhmadAwais.com",
-		"url": "https://twitter.com/MrAhmadAwais"
-	},
 	"main": "index.js",
 	"engines": {
 		"node": ">=12.x"
@@ -24,9 +18,8 @@
 		"data/*"
 	],
 	"keywords": [
-		"ramadan-cli",
-		"Ahmad Awais",
-		"ahmadawais"
+		"roza",
+		"ramadan-cli"
 	],
 	"devDependencies": {
 		"ava": "^3.7.1",

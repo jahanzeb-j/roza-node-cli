@@ -4,15 +4,16 @@ const green = require('./green');
 const {DateTime} = require('luxon');
 const wishEid = `${sym.success} Eid Mubarak.\nRamadan is already over. Hope you had a fun time on Eid.\n`;
 
-module.exports = ({all, city}) => {
+module.exports = ({all, next, city}) => {
 	// Import the right city.
 	const data = require(`../data/${city}.json`);
 
 	// Find the current roza.
-	const firstRoza = DateTime.fromISO('2021-04-14');
+	const firstRoza = DateTime.fromISO('2022-04-03');
 	const today = DateTime.local();
-	const rozaNumber = Math.floor(today.diff(firstRoza, 'days').as('days'));
-
+	let rozaNumber = Math.floor(today.diff(firstRoza, 'days').as('days'));
+	// if next day
+	rozaNumber = next ? rozaNumber + 1 : rozaNumber;
 	// Still ramadan?
 	if (rozaNumber > 30) {
 		console.log(wishEid);
@@ -32,6 +33,7 @@ module.exports = ({all, city}) => {
 		!all && table.push([roza.no, roza.sehar, roza.iftar, roza.date]);
 
 		// Do it.
+		console.log(`${sym.success} City: ${city}`);
 		console.log(table.toString());
 	}
 };
