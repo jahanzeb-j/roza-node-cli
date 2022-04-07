@@ -17,8 +17,10 @@ module.exports = meow(
 	Options
 	  ${yellow(`--all`)}, ${yellow(`-a`)}   Show all days
 	  ${yellow(`--next`)}, ${yellow(`-n`)}   Show next day
+	  ${yellow(`--default`)}, ${yellow(`-d`)}   Set Default city
 
 	Examples
+	${green(`roza`)}
 	${green(`roza`)} ${cyan(`lahore`)}
 	${green(`roza`)} ${cyan(`karachi`)} ${yellow(`--all`)}
 	${green(`roza`)} ${cyan(`beijing`)} ${yellow(`-a`)}
@@ -38,6 +40,11 @@ module.exports = meow(
 				type: 'boolean',
 				default: false,
 				alias: 'n'
+			},
+			default: {
+				type: 'boolean',
+				default: false,
+				alias: 'd'
 			}
 		}
 	}
