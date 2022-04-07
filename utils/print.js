@@ -33,7 +33,10 @@ module.exports = ({all, next, city}) => {
 		!all && table.push([roza.no, roza.sehar, roza.iftar, roza.date]);
 
 		// Do it.
-		console.log(`${sym.success} City: ${city}`);
+		const cityNiceName = `${city.charAt(0).toUpperCase()}${city
+			.slice(1)
+			.replace(/-/g, ' ')}`;
+		console.log(`${sym.success} City: ${cityNiceName}`);
 		console.log(table.toString());
 	}
 };
