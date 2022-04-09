@@ -31,7 +31,7 @@
 	"scripts": {
 		"test": "ava",
 		"format": "prettier --write \"./**/*.{js,json}\"",
-		"get-data": "node ./utils/generateData.js"
+		"get-data": "node ./utils/newData.js"
 	},
 	"dependencies": {
 		"chalk": "^4.1.0",
@@ -44,6 +44,7 @@
 		"log-symbols": "^4.1.0",
 		"luxon": "^1.23.0",
 		"meow": "^9.0.0",
-		"ora": "^5.4.0"
+		"ora": "^5.4.0",
+		"await-to-js": "^3.0.0"
 	}
 }
