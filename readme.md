@@ -9,7 +9,7 @@
 -   🌜 Get Sehar/Iftar times for your city
 -   🗓 Get Sehar/Iftar times for entire month of Ramadan
 -   Pakistan 60+ cities data including `lahore`, `multan`, `karachi`, `islamabad`, `rawalpindi`, `quetta`, `peshawar`, `hyderabad`,`faisalabad`, `gujranwala`, `sialkot`, `ghotki` and more
-    -International cities `beijing`,
+-   International cities `beijing`,
     `wuhan`,
     `shanghai`,
     `new-york`,
@@ -45,7 +45,7 @@ npm i -g .
 roza Karachi
 npx roza
 
-roza #Show default city name
+roza #Show time of default city name
 
 # Show help.
 roza help
@@ -68,9 +68,8 @@ roza -n
 npx roza "new-york" --all
 ```
 
-<br>
 ## Output
-
+[![📟](./.github/output.png)](./../../)
 
 <br>
 
@@ -80,8 +79,6 @@ npx roza "new-york" --all
 -   [Code of Conduct](code-of-conduct.md)
 
 <br>
-
-[![🙌](https://raw.githubusercontent.com/jahanzeb-j/stuff/master/images/git/connect.png)](./../../)
 
 ## Connect
 
@@ -98,4 +95,4 @@ npx roza "new-york" --all
 ## Credits
 
 <a href="https://github.com/ahmadawais"><img alt="GitHub @AhmadAwais" align="center" src="https://img.shields.io/badge/GITHUB-gray.svg?colorB=6cc644&style=flat" /></a>
-Ahmad Awais (https://twitter.com/mrahmadawais/) open-source developer. Thank you for work [ramadan-cli](https://github.com/ahmadawais/ramadan-cli). I extended his work.
+Ahmad Awais (https://twitter.com/mrahmadawais/) open-source developer. Thank you for work [ramadan-cli](https://github.com/ahmadawais/ramadan-cli). I further extended his work.
