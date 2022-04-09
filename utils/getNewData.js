@@ -7,13 +7,12 @@ const ora = require('ora');
 const spinner = ora({text: ''});
 const {green: g, red: r, yellow: y, dim: d} = require('chalk');
 const alert = require('cli-alerts');
-// console.log('hhh');
 
 let getCity = async ({city}) => {
 	const endpoint = `https://api.pray.zone/v2/times/dates.json?start=2022-04-03&end=2022-05-02&key=MagicKey&city=${city}&school=1&timeformat=1`;
 
 	const [err, response] = await to(axios.get(endpoint));
-	// handleError(`City ${city} not found, typo?! Try again.`, err, false);
+	handleError(`City ${city} not found, typo?! Try again.`, err, false);
 
 	const ramazan = response.data.results.datetime;
 

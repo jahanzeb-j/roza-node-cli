@@ -1,6 +1,6 @@
 {
 	"name": "roza",
-	"version": "1.0.2",
+	"version": "1.0.5",
 	"description": "Check Sehar and Iftar times in Ramadan within your terminal.",
 	"license": "MIT",
 	"main": "index.js",
