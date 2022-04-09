@@ -31,7 +31,7 @@
 	"scripts": {
 		"test": "ava",
 		"format": "prettier --write \"./**/*.{js,json}\"",
-		"get-data": "node ./utils/newData.js"
+		"get-data": "node ./utils/getNewData.js"
 	},
 	"dependencies": {
 		"chalk": "^4.1.0",

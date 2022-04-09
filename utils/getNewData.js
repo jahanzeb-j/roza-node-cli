@@ -3,8 +3,6 @@ const path = require('path');
 const axios = require('axios');
 const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
-const cheerio = require('cheerio');
-const formatDate = require('./formatDate');
 const ora = require('ora');
 const spinner = ora({text: ''});
 const {green: g, red: r, yellow: y, dim: d} = require('chalk');
@@ -42,8 +40,6 @@ let getCity = async ({city}) => {
 		spinner.start(`${y(`FETCHING`)} city ${g(cityName)}…`);
 		try {
 			let data = await getCity({city: cityName.toLowerCase()});
-
-			// spinner.succeed(`${g(cityName)}: Data saved`);
 
 			// console.log(JSON.stringify(data));
 

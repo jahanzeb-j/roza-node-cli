@@ -1,24 +1,37 @@
+# Roza Node Cli
 
-# Roza
 > CLI to check Ramadan Sehar and Iftar times in the command line..
 
 [![DOWNLOADS](https://img.shields.io/npm/dt/roza-cli?label=DOWNLOADS%20%20❯&colorA=81F096&colorB=81F096&style=flat)](https://www.npmjs.com/package/roza-cli)
 
-
 <br>
 
-- 🌜 Get Sehar/Iftar times for your city
-- 🗓 Get Sehar/Iftar times for entire month of Ramadan
-- Pakistan 99 cities data including `lahore`, `multan`, `karachi`, `islamabad`, `rawalpindi`, `quetta`, `peshawar`, `hyderabad`,`faisalabad`, `gujranwala`, `sialkot`, `ghotki` and many more
+-   🌜 Get Sehar/Iftar times for your city
+-   🗓 Get Sehar/Iftar times for entire month of Ramadan
+-   Pakistan 60+ cities data including `lahore`, `multan`, `karachi`, `islamabad`, `rawalpindi`, `quetta`, `peshawar`, `hyderabad`,`faisalabad`, `gujranwala`, `sialkot`, `ghotki` and more
+    -International cities `beijing`,
+    `wuhan`,
+    `shanghai`,
+    `new-york`,
+    `tokyo`,
+    `jeddah`,
+    `san-francisco`,
+    `mumbai`,
+    `Guangzhou`,
+    `Delhi`,
+    `Moscow`,
+    `Shenzhen`,
+    `dhaka`,
+    `seoul`
 
 <br>
-
 
 ## Install
 
 ```sh
 npx roza
 ```
+> Install using current directory
 ```sh
 npm i -g .
 ```
@@ -33,6 +46,7 @@ roza Karachi
 npx roza
 
 roza #Show default city name
+
 # Show help.
 roza help
 
@@ -40,34 +54,30 @@ npx roza beijing
 npx roza
 # Show all days.
 npx roza lahore --all
-npx roza lahore -a
+npx roza karachi -a
 
 # Show next day.
 roza beijing -n
 roza beijing --next
-# Set Default City Name
+# Set City Name as Default
 roza beijing -d
 roza
+roza -n
 
 # For multiword cities.
-npx roza "dera ghazi khan" --all
-npx roza "dera ghazi khan" -a
+npx roza "new-york" --all
 ```
 
 <br>
+## Output
 
-
-## Changelog
-
-[❯ Read the changelog here →](changelog.md)
 
 <br>
 
-
 ## License & Conduct
 
-- MIT © [Jahanzeb](https://twitter.com/jahanzebjabbar/)
-- [Code of Conduct](code-of-conduct.md)
+-   MIT © [Jahanzeb](https://twitter.com/jahanzebjabbar/)
+-   [Code of Conduct](code-of-conduct.md)
 
 <br>
 
@@ -85,9 +95,7 @@ npx roza "dera ghazi khan" -a
 
 <br>
 
-
 ## Credits
 
 <a href="https://github.com/ahmadawais"><img alt="GitHub @AhmadAwais" align="center" src="https://img.shields.io/badge/GITHUB-gray.svg?colorB=6cc644&style=flat" /></a>
 Ahmad Awais (https://twitter.com/mrahmadawais/) open-source developer. Thank you for work [ramadan-cli](https://github.com/ahmadawais/ramadan-cli). I extended his work.
-

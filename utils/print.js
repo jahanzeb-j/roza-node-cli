@@ -27,9 +27,18 @@ module.exports = ({all, next, city}) => {
 
 		// All or one.
 		all &&
-			data.map(day =>
-				table.push([day.no, day.sehar, day.iftar, day.date])
-			);
+			data.map(day => {
+				if (isToday(day.date)) {
+					table.push([
+						green(day.no),
+						green(day.sehar),
+						green(day.iftar),
+						green(day.date)
+					]);
+					return;
+				}
+				table.push([day.no, day.sehar, day.iftar, day.date]);
+			});
 		!all && table.push([roza.no, roza.sehar, roza.iftar, roza.date]);
 
 		// Do it.
@@ -40,3 +49,13 @@ module.exports = ({all, next, city}) => {
 		console.log(table.toString());
 	}
 };
+
+function isToday(dt) {
+	const date = DateTime.fromISO(dt);
+	const today = DateTime.local();
+	return (
+		date.year === today.year &&
+		date.month === today.month &&
+		date.day === today.day
+	);
+}
