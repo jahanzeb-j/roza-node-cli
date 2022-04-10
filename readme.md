@@ -26,13 +26,15 @@
 
 <br>
 
-## Install
+## ➕ Install
 
 ```sh
 npx roza
 ```
 > Install using current directory
 ```sh
+git clone https://github.com/jahanzeb-j/oza-node-cli.git
+cd roza-node-cli
 npm i -g .
 ```
 
@@ -50,11 +52,10 @@ roza #Show time of default city name
 # Show help.
 roza help
 
-npx roza beijing
-npx roza
+roza beijing
 # Show all days.
 npx roza lahore --all
-npx roza karachi -a
+roza karachi -a
 
 # Show next day.
 roza beijing -n
@@ -68,19 +69,28 @@ roza -n
 npx roza "new-york" --all
 ```
 
-## Output
+## 💻 Output
 [![📟](./.github/output.png)](./../../)
 
 <br>
 
-## License & Conduct
+## 🤝Contribution
+> this repo is open for new ideas
+- Correct data.
+- Add new city.
+    - Add JSON to './data/'
+    - Add city name to cities.js
+
+<br>
+
+## 📃 License & Conduct
 
 -   MIT © [Jahanzeb](https://twitter.com/jahanzebjabbar/)
 -   [Code of Conduct](code-of-conduct.md)
 
 <br>
 
-## Connect
+## ⛓ Connect
 
 <div align="left">
     <p><a href="https://github.com/jahanzeb-j"><img alt="GitHub @Jahanzeb-j" align="center" src="https://img.shields.io/badge/GITHUB-gray.svg?colorB=6cc644&style=flat" /></a>&nbsp;<small><strong>(follow)</strong> To stay up to date on free & open-source software</small></p>
@@ -92,7 +102,7 @@ npx roza "new-york" --all
 
 <br>
 
-## Credits
+## 🎈 Credits
 
 <a href="https://github.com/ahmadawais"><img alt="GitHub @AhmadAwais" align="center" src="https://img.shields.io/badge/GITHUB-gray.svg?colorB=6cc644&style=flat" /></a>
 Ahmad Awais (https://twitter.com/mrahmadawais/) open-source developer. Thank you for work [ramadan-cli](https://github.com/ahmadawais/ramadan-cli). I further extended his work.
