@@ -33,7 +33,7 @@ npx roza
 ```
 > Install using current directory
 ```sh
-git clone https://github.com/jahanzeb-j/oza-node-cli.git
+git clone https://github.com/jahanzeb-j/roza-node-cli.git
 cd roza-node-cli
 npm i -g .
 ```
