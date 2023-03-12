@@ -9,9 +9,10 @@ module.exports = ({all, next, city}) => {
 	const data = require(`../data/${city}.json`);
 
 	// Find the current roza.
-	const firstRoza = DateTime.fromISO('2022-04-03');
+	const firstRoza = DateTime.fromFormat('23-03-2023','dd-MM-yyyy');
 	const today = DateTime.local();
 	let rozaNumber = Math.floor(today.diff(firstRoza, 'days').as('days'));
+	// console.log(rozaNumber);
 	// if next day
 	rozaNumber = next ? rozaNumber + 1 : rozaNumber;
 	// Still ramadan?
