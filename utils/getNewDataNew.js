@@ -13,7 +13,7 @@ let getCity = async ({ city }) => {
 	let endpoint = `http://api.aladhan.com/v1/calendarByCity/2023/3?city=${city}&country=&method=2`;
 
 	let [err, response] = await to(axios.get(endpoint));
-	handleError(`City ${city} not found, typo?! Try again.`, err, false,false);
+	handleError(`City ${city} not found, typo?! Try again.`, err, false, false);
 
 	let ramazan = response.data.data;
 
@@ -25,7 +25,7 @@ let getCity = async ({ city }) => {
 	ramazan.map((roza, count) => {
 
 		if (count > 21) {
-			no = no+1;
+			no = no + 1;
 			const sehar = roza.timings['Fajr'];
 			const iftar = roza.timings['Maghrib'];
 			const date = roza.date['gregorian'].date;
@@ -37,7 +37,7 @@ let getCity = async ({ city }) => {
 	endpoint = `http://api.aladhan.com/v1/calendarByCity/2023/4?city=${city}&country=&method=2`;
 
 	[err, response] = await to(axios.get(endpoint));
-	handleError(`City ${city} not found, typo?! Try again.`, err, false,false);
+	handleError(`City ${city} not found, typo?! Try again.`, err, false, false);
 
 	ramazan = response.data.data;
 
@@ -48,7 +48,7 @@ let getCity = async ({ city }) => {
 	ramazan.map((roza, count) => {
 		// const no = count + 1;
 		if (count < 21) {
-			no = no+1;
+			no = no + 1;
 			const sehar = roza.timings['Fajr'];
 			const iftar = roza.timings['Maghrib'];
 			const date = roza.date['gregorian'].date;
@@ -64,28 +64,32 @@ let getCity = async ({ city }) => {
 	let baseDir = path.join(__dirname, '../data/');
 	const cities = require('./cities.js');
 
+	let cityList = cities;
 	// let data = await getCity({ city: 'tianjin' });
 	// console.log(data);
+	while (cityList.length > 0) {
+		// console.log(cities);
+		for (const city of cityList) {
+			let cityName = city; //'beijing';
+			spinner.start(`${y(`FETCHING`)} city ${g(cityName)}…`);
+			try {
+				let data = await getCity({ city: cityName.toLowerCase() });
 
-	// console.log(cities);
-	for (const city of cities) {
-		let cityName = city; //'beijing';
-		spinner.start(`${y(`FETCHING`)} city ${g(cityName)}…`);
-		try {
-			let data = await getCity({city: cityName.toLowerCase()});
+				// console.log(JSON.stringify(data));
+				fs.writeFile(
+					`${baseDir}/${cityName}.json`,
+					JSON.stringify(data),
+					'utf8',
+					err => {
+						if (err) throw err;
+						spinner.succeed(`${g(cityName)}: Data saved`);
+					}
+				);
 
-			// console.log(JSON.stringify(data));
-
-			fs.writeFile(
-				`${baseDir}/${cityName}.json`,
-				JSON.stringify(data),
-				'utf8',
-				err => {
-					if (err) throw err;
-					spinner.succeed(`${g(cityName)}: Data saved`);
-				}
-			);
-		} catch (error) {}
+				cityList = cityList.filter(c => c!=city);
+				console.log(cityList);
+			} catch (error) { }
+		}
 	}
 	alert({
 		type: `success`,

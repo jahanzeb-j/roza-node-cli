@@ -1,5 +1,6 @@
 module.exports = [
 	'beijing',
+	'tianjin',
 	'wuhan',
 	'shanghai',
 	'new-york',
