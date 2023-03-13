@@ -2,6 +2,7 @@ const sym = require('log-symbols');
 const Table = require('cli-table3');
 const green = require('./green');
 const {DateTime} = require('luxon');
+const gold = require('./gold');
 const wishEid = `${sym.success} Eid Mubarak.\nRamadan is already over. Hope you had a fun time on Eid.\n`;
 
 module.exports = ({all, next, city}) => {
@@ -31,10 +32,10 @@ module.exports = ({all, next, city}) => {
 			data.map(day => {
 				if (isToday(day.date)) {
 					table.push([
-						green(day.no),
-						green(day.sehar),
-						green(day.iftar),
-						green(day.date)
+						gold(day.no),
+						gold(day.sehar),
+						gold(day.iftar),
+						gold(day.date)
 					]);
 					return;
 				}
@@ -52,7 +53,7 @@ module.exports = ({all, next, city}) => {
 };
 
 function isToday(dt) {
-	const date = DateTime.fromISO(dt);
+	const date = DateTime.fromFormat(dt,'dd-MM-yyyy');
 	const today = DateTime.local();
 	return (
 		date.year === today.year &&
