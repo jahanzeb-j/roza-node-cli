@@ -28,6 +28,10 @@
 
 ## ➕ Install
 
+### Install Node.js
+https://nodejs.org/en/download
+
+> Using npx
 ```sh
 npx roza
 ```
