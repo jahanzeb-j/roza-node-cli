@@ -74,6 +74,8 @@ npx roza "new-york" --all
 ```
 
 ## 💻 Output
+[![📟](./.github/roza-output.gif)](./../../)
+
 [![📟](./.github/output.png)](./../../)
 
 <br>
